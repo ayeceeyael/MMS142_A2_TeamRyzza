@@ -34,7 +34,7 @@
                 const subject = encodeURIComponent(`Inquiry from ${name}`);
                 const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-                window.location.href = `mailto:recipient?subject={subject}&body=${body}`;
+                window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
             });
         }
     });
