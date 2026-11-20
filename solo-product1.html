@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Be Late Tee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="solo-product-style.css">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-us.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <!-- shared navbar -->
+<header class="shared-header">
+  <nav class="shared-navbar" aria-label="Primary navigation">
+
+    <div class="shared-nav-links">
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html">Home</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="index.html#about-us">About</a>
+    </div>
+
+    <a href="index.html" class="shared-nav-logo">
+      <img src="plogo-1.png" alt="Body Tee Home">
+    </a>
+
+    <div class="shared-nav-icons">
+      <button type="button" id="searchButton" aria-label="Search">
+        <img src="search-icon.png" alt="">
+      </button>
+      <button type="button" id="signInButton" aria-label="Account sign in">
+        <img src="pfp-icon.png" alt="">
+      </button>
+      <button type="button" id="cartButton" aria-label="Shopping cart">
+        <img src="shop-icon.png" alt="">
+      </button>
+    </div>
+
+  </nav>
+</header>
+
+<!-- search popup -->
+<div id="searchPanel" class="search-panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle" hidden>
+  <div class="search-panel-content">
+    <div class="search-heading">
+      <h2 id="searchTitle">Search</h2>
+      <button type="button" id="closeSearchButton" class="close-button" aria-label="Close search">&times;</button>
+    </div>
+
+    <form id="searchForm">
+      <label for="searchInput">Search products</label>
+      <div class="search-input-wrapper">
+        <input type="search" id="searchInput" class="search-input" name="search" placeholder="What are you looking for?">
+        <button type="submit" class="signin-submit">Search</button>
+      </div>
+      <p id="searchFeedback" class="form-feedback" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<!-- sign in popup -->
+<div id="signInPanel" class="signin-panel" role="dialog" aria-modal="true" aria-labelledby="signInTitle" hidden>
+  <div class="signin-panel-content">
+    <div class="signin-heading">
+      <h2 id="signInTitle">Sign In</h2>
+      <button type="button" id="closeSignInButton" class="close-button" aria-label="Close sign in">&times;</button>
+    </div>
+
+    <p class="signin-note">Enter your account details below.</p>
+
+    <form id="signInForm">
+      <div class="form-group">
+        <label for="signInEmail">Email address</label>
+        <input type="email" id="signInEmail" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="signInPassword">Password</label>
+        <input type="password" id="signInPassword" name="password" required>
+      </div>
+
+      <button type="submit" class="signin-submit">Sign In</button>
+      <p id="signInFeedback" class="form-feedback" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+
+<div class="small-container single-product">
+    <!-- product details -->
+    <div class="row">
+        <div class="product-col">
+            <img src="solo-dont-be-late-tee-back.png" id="product-img" width="100%"
+             id="ProductImg" alt="Don't Be Late Tee">
+             <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="solo-dont-be-late-tee.png" id="small-product-img" width="100%" class="small-img" alt="Don't Be Late Tee">
+                </div>
+                <div class="small-img-col">
+                    <img src="solo-dont-be-late-tee-closeup.png" id="small-product-img" width="100%" class="small-img" alt="Don't Be Late Tee Closeup">
+                </div>
+                <div class="small-img-col">
+                    <img src="solo-dont-be-late-tee-back-closeup.png" id="small-product-img" width="100%" class="small-img" alt="Don't Be Late Tee Back">
+                </div>
+            </div>
+        </div>
+        <div class="product-col">
+            <h1><b>Don't Be Late Tee</b></h1><br>
+            <h2>₱499</h2><br>
+            <p>A simple reminder to show up, get moving, and make the most of the day.</p><br>
+            <hr><br>
+            <form>
+
+                <!-- color selection -->
+                <div class="color-select">
+                  <p>Color</p>
+                  <label for="red">
+                    <input type="radio" name="color" id="red" value="Red">
+                    <span class="color-1">Red</span>
+                  </label>
+                  <label for="white">
+                    <input type="radio" name="color" id="white" value="White">
+                    <span class="color-2">White</span>
+                  </label>
+                  <label for="black">
+                    <input type="radio" name="color" id="black" value="Black">
+                    <span class="color-3">Black</span>
+                  </label>
+                </div>
+
+                <!-- size selection -->
+                <div class="size-select">
+                    <div class="size-header">
+                      <p>Size</p>
+                      <a href="#" id="open-size-chart" class="size-chart-link">Size Chart</a>
+                    </div>
+
+                    <label for="extra-small">
+                        <input type="radio" name="size" id="extra-small" value="XS">
+                        <span>XS</span>
+                    </label>
+                    <label for="small">
+                        <input type="radio" name="size" id="small" value="S">
+                        <span>S</span>
+                    </label>
+                    <label for="medium">
+                        <input type="radio" name="size" id="medium" value="M">
+                        <span>M</span>
+                    </label>
+                    <label for="large">
+                        <input type="radio" name="size" id="large" value="L">
+                        <span>L</span>
+                    </label>
+                    <label for="x-large">
+                        <input type="radio" name="size" id="x-large" value="XL">
+                        <span>XL</span>
+                    </label>
+                    <label for="x-x-large">
+                        <input type="radio" name="size" id="x-x-large" value="2XL">
+                        <span>2XL</span>
+                    </label>
+                    <label for="x-x-x-large">
+                        <input type="radio" name="size" id="x-x-x-large" value="3XL">
+                        <span>3XL</span>
+                    </label>
+                    <label for="x-x-x-x-large">
+                        <input type="radio" name="size" id="x-x-x-x-large" value="4XL">
+                        <span>4XL</span>
+                    </label>
+                </div>   
+
+                <!-- size chart popup -->
+                <dialog id="size-chart-modal">
+                  <div class="modal-header">
+                    <h2><strong>Size Chart</strong></h2>
+                    <button type="button" id="close-size-chart">✕</button>
+                  </div>
+                  <table class="size-table">
+                    <thead>
+                      <tr>
+                        <th>MEASUREMENTS</th>
+                        <th>XS</th>
+                        <th>S</th>
+                        <th>M</th>
+                        <th>L</th>
+                        <th>XL</th>
+                        <th>2XL</th>
+                        <th>3XL</th>
+                        <th>4XL</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>CHEST (in)</td><td>32-34</td><td>35-37</td><td>38-40</td><td>41-43</td><td>44-46</td><td>47-49</td><td>50-53</td><td>54-57</td></tr>
+                      <tr><td>BODY LENGTH (in)</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>32</td><td>33</td></tr>
+                      <tr><td>SLEEVE LENGTH (in)</td><td>13.5</td><td>14.1</td><td>14.7</td><td>15.3</td><td>16</td><td>16.6</td><td>17.2</td><td>17.8</td></tr>
+                    </tbody>
+                    <br><hr>
+                  </table>
+                </dialog>
+
+              <div class="order-actions">
+                <div class="wrapper">
+                  <span class="minus" id="qty-minus">-</span>
+                  <span class="num" id="qty-num">1</span>
+                  <span class="plus" id="qty-plus">+</span>
+                </div>
+                <button type="button" id="order-now-btn" class="order-btn"><strong>ORDER NOW</strong></button>
+              </div><br>
+
+              <hr>
+
+              <!-- Material & Care -->
+              <div class="material-care-accordion">
+                <button type="button" id="material-care-button" class="accordion__button" aria-expanded="false" aria-controls="material-care-content">Material & Care</button>
+                <div id="material-care-content" class="accordion__content" role="region" aria-labelledby="material-care-button" aria-hidden="true">
+                  <p> 
+                    <b>Material</b><br>
+- 100% Organic Cotton<br>
+- True to size with relaxed comfort<br><br>
+
+                    <b>Care</b><br>
+- Wash inside out, in cold water, on gentle cycle.<br>
+- Tumble dry low or let it air dry.<br>
+- Do not use Fabric Softeners or Bleach.<br>
+- Do not dry clean.<br><br>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Shipping & Returns -->
+              <div class="shipping-returns-accordion">
+                <button type="button" id="shipping-returns-button" class="accordion__button" aria-expanded="false" aria-controls="shipping-returns-content">Shipping & Returns</button>
+                <div id="shipping-returns-content" class="accordion__content" role="region" aria-labelledby="shipping-returns-button" aria-hidden="true">
+                  <p>
+                    <b>Made to Order:</b> Most of our pieces are printed in small batches when you order them. The lead time is within 2 weeks after ordering.<br><br>
+                    <b>Shipping:</b> Free standard shipping on orders of ₱899 or more. Delivery takes 3 to 5 business days. Order tracker is sent via email.<br><br>
+                    <b>Returns:</b> Wrong size? Send it back unworn and unwashed within 30 days of delivery and we'll remake it in your size with the same print. You cover the return shipping for a size swap, and we ship the new one free. If item is damaged, send us a photo within 30 days of delivery and we'll remake it or refund you, and we cover the shipping both ways.</p><br>
+                </div>
+              </div>
+
+              <!-- Share Product -->
+              <div class="product-share">
+                <span class="product-share-label">Share Product:</span>
+                <div class="footer-socials product-share-links" aria-label="Share this product">
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="fb-icon.png" alt="Facebook">
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="ig-icon.png" alt="Instagram">
+                  </a>
+                  <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="xapp-icon.png" alt="X">
+                  </a>
+                  <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="tiktok-icon.png" alt="TikTok">
+                  </a>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <section id="shop" class="home-shop">
+
+      <h4 class="shop-heading product-section-heading"><b> Related Products </b></h4>
+
+      <div class="container-fluid p-0">
+        <div class="row gx-4 gy-0">
+
+            <!-- Product 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="solo-product2.html" class="shop-card"
+                   aria-label="View Everyday Comfort Tee">
+
+                    <div class="shop-card-image">
+                        <img src="home-shop-everyday-comfort-tee.png" alt="Everyday Comfort Tee product design">
+                    </div>
+
+                    <h3>Everyday Comfort Tee</h3>
+                    <p>₱499</p>
+
+                    <div class="product-swatches" aria-label="Available colors">
+                       <span class="swatch swatch-product2-black"></span>
+                        <span class="swatch swatch-product2-blue"></span>
+                        <span class="swatch swatch-product2-darkgreen"></span>
+                    </div>
+
+                </a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="solo-product3.html" class="shop-card"
+                   aria-label="View Do Good Work Tee">
+
+                    <div class="shop-card-image">
+                        <img src="home-shop-do-good-work-tee.png" alt="Do Good Work Tee product design">
+                    </div>
+
+                    <h3>Do Good Work Tee</h3>
+                    <p>₱499</p>
+
+                    <div class="product-swatches" aria-label="Available colors">
+                        <span class="swatch swatch-product3-black"></span>
+                        <span class="swatch swatch-product3-white"></span>
+                        <span class="swatch swatch-product3-darkblue"></span>
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews" aria-labelledby="customer-reviews-title">
+      <div class="review-summary-box">
+        <h2 id="customer-reviews-title" class="product-section-heading">Customer Reviews</h2>
+
+        <div class="review-summary-row">
+          <div class="rating-distribution" aria-label="Rating distribution">
+            <div class="rating-row" aria-label="1 five-star review">
+              <span>5</span><span class="rating-row-star" aria-hidden="true">★</span>
+              <span class="rating-track"><span class="rating-track-fill"></span></span><span>1</span>
+            </div>
+            <div class="rating-row" aria-label="0 four-star reviews">
+              <span>4</span><span class="rating-row-star" aria-hidden="true">★</span>
+              <span class="rating-track"></span><span>0</span>
+            </div>
+            <div class="rating-row" aria-label="0 three-star reviews">
+              <span>3</span><span class="rating-row-star" aria-hidden="true">★</span>
+              <span class="rating-track"></span><span>0</span>
+            </div>
+            <div class="rating-row" aria-label="0 two-star reviews">
+              <span>2</span><span class="rating-row-star" aria-hidden="true">★</span>
+              <span class="rating-track"></span><span>0</span>
+            </div>
+            <div class="rating-row" aria-label="0 one-star reviews">
+              <span>1</span><span class="rating-row-star" aria-hidden="true">★</span>
+              <span class="rating-track"></span><span>0</span>
+            </div>
+          </div>
+
+          <div class="review-overall-rating">
+            <div class="review-rating-headline">
+              <span class="review-rating-number">5</span>
+              <span class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+            </div>
+            <p>Based on 1 review</p>
+          </div>
+
+          <button type="button" id="write-review-button" class="write-review-button"><b>Write a Review</b></button>
+        </div>
+      </div>
+
+      <div class="review-sort">
+        <label for="review-sort-select">Sort by:</label>
+        <select id="review-sort-select">
+          <option value="highest">Highest rating</option>
+          <option value="lowest">Lowest rating</option>
+        </select>
+      </div>
+
+      <div class="review-list">
+        <article class="review-card" data-rating="5" aria-label="5-star review by Jane Doe">
+          <div class="review-card-heading">
+            <span class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+            <time datetime="2026-10-15">10/15/26</time>
+          </div>
+          <h3><b>Amazing!</b></h3>
+          <p>Great quality tee. I love it.</p>
+          <div class="review-photos">
+            <img src="home-shop-dont-be-late-tee.png" alt="Review photo">
+            <img src="solo-dont-be-late-tee-back.png" alt="Review photo">
+          </div>
+          <p class="review-author">Jane Doe</p>
+        </article>
+      </div>
+
+    </section>
+
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+<!-- shared footer -->
+<footer class="shared-footer">
+  <div class="footer-content">
+
+    <a href="index.html" class="shared-footer-logo">
+      <img src="slogo-2.png" alt="Body Tee">
+    </a>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#about-us">About Us</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <button type="button" class="coming-soon-link">Terms of Use</button>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Body Tee on Facebook">
+        <img src="fb-icon.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Body Tee on Instagram">
+        <img src="ig-icon.png" alt="">
+      </a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Body Tee on X">
+        <img src="xapp-icon.png" alt="">
+      </a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Body Tee on TikTok">
+        <img src="tiktok-icon.png" alt="">
+      </a>
+    </div>
+
+  </div>
+
+  <p class="footer-copyright">© 2026 Body Tee. All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="solo-product-script.js"></script>
+</body>
+</html>
+
+
