@@ -1,4 +1,4 @@
-- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -66,6 +66,20 @@ body {
     flex-basis: 30%;
     cursor: pointer;
     padding: 3px 0;
+}
+
+.thumbnail-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.thumbnail-button[aria-pressed="true"] .small-img {
+    outline: 2px solid #0B50B6;
+    outline-offset: -4px;
 }
 
 .small-img {
