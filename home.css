@@ -605,3 +605,16 @@
 }
 
 
+@media screen and (max-width: 600px) {
+
+    .home-page .home-about-overlay-text p {
+        text-align: justify !important;
+        text-align-last: justify;
+    }
+
+    .home-page .home-about-content p {
+        text-align: justify !important;
+        text-align-last: justify;
+    }
+
+}
